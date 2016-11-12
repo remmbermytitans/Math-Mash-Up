@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class EquationManager : MonoBehaviour 
 {
+	public GameManager gm;
+
 	public UILabel[] equationOperators;
 	public UILabel[] equationNumbers;
 	public List<float> equationValues = new List<float>();
@@ -60,7 +62,20 @@ public class EquationManager : MonoBehaviour
 
 	private void ComputeAnswers()
 	{
-		
+		bool allEquationsEqual = true;
+		float target = 0;
+
+		target = equationValues [0];
+		foreach (float f in equationValues) 
+		{
+			if (f != target)
+				allEquationsEqual = false;
+		}
+
+		if (allEquationsEqual)
+			gm.UpdateStreak (true);
+		else
+			gm.UpdateStreak (false);
 	}
 
 	private void PrepareEquation()
