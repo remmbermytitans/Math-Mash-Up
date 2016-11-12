@@ -72,8 +72,11 @@ public class EquationManager : MonoBehaviour
 				allEquationsEqual = false;
 		}
 
-		if (allEquationsEqual)
+		if (allEquationsEqual) 
+		{
 			gm.UpdateStreak (true);
+			ResetOperators ();
+		}
 		else
 			gm.UpdateStreak (false);
 	}
@@ -104,6 +107,7 @@ public class EquationManager : MonoBehaviour
 	{
 		foreach (UILabel uil in equationOperators)
 			uil.text = "?";	
+		equationValues.Clear ();
 	}
 
 	public void UpdateOperator(string str)

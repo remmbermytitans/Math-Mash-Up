@@ -14,9 +14,8 @@ public class NotificationManager : MonoBehaviour
 			notificationStreakText.GetComponent<UILabel> ().text = "+" + streak.ToString ();
 		else
 			notificationStreakText.GetComponent<UILabel> ().text = streak.ToString ();
-		
-		notificationStreakText.GetComponent<TweenAlpha> ().PlayForward ();
-		notificationStreakText.GetComponent<TweenTransform> ().PlayForward ();
+
+		notificationStreakText.GetComponent<UIPlayTween> ().Play (true);
 	}
 
 	private void Streak(bool onFire)
