@@ -2139,8 +2139,12 @@ MonoBehaviour:
   - {fileID: 228113201}
   - {fileID: 1076357536}
   - {fileID: 952487859}
-  equationNumbers: []
-  equalsLocations: 
+  equationNumbers:
+  - {fileID: 1254458246}
+  - {fileID: 943704232}
+  - {fileID: 1202434774}
+  - {fileID: 1367693076}
+  equationValues: 
 --- !u!1 &1335991381
 GameObject:
   m_ObjectHideFlags: 0
