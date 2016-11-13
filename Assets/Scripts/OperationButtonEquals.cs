@@ -32,7 +32,10 @@ public class OperationButtonEquals : MonoBehaviour
 				obm.ResetOperators();
 				clearSent = true;
 			}
+
+			//this is all temporary, remove this later
+			if (timePressed > 3)
+				Application.LoadLevel (0);
 		}
 	}
-
 }
