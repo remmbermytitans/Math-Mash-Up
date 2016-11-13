@@ -6,6 +6,7 @@ public class OperationButtonManager : MonoBehaviour
 {
 	public EquationManager em;
 	public List<string> listOfPossibleOperators;
+	public List<string> listOfPossibleRelationalOperators;
 	//public List<string> listOfChosenOperators;
 	public UILabel[] operationButtonIconList; //can this be the object instead?
 
@@ -18,6 +19,8 @@ public class OperationButtonManager : MonoBehaviour
 	{
 		for (int i = 0; i < 4; i++)
 			operationButtonIconList[i].text = PickOperatorAtRandom();
+		
+		operationButtonIconList[operationButtonIconList.Length-1].text = PickRelationalOperatorAtRandom();
 	}
 
 	string PickOperatorAtRandom()
@@ -25,6 +28,13 @@ public class OperationButtonManager : MonoBehaviour
 		int randNum = Random.Range(0, listOfPossibleOperators.Count);
 		string randStr = listOfPossibleOperators [randNum];
 		listOfPossibleOperators.RemoveAt (randNum);
+		return randStr;
+	}
+
+	string PickRelationalOperatorAtRandom()
+	{
+		int randNum = Random.Range(0, listOfPossibleRelationalOperators.Count);
+		string randStr = listOfPossibleRelationalOperators [randNum];
 		return randStr;
 	}
 

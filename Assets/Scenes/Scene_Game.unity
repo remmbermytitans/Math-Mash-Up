@@ -1392,7 +1392,7 @@ GameObject:
   - 4: {fileID: 371621770}
   - 114: {fileID: 371621771}
   m_Layer: 5
-  m_Name: Operator_Text
+  m_Name: RetionalOperator_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2291,13 +2291,21 @@ MonoBehaviour:
   listOfPossibleOperators:
   - +
   - '-'
-  - x
+  - "\xD7"
   - "\xF7"
+  - "a\xAA"
+  listOfPossibleRelationalOperators:
+  - =
+  - <
+  - '>'
+  - "\u2264"
+  - "\u2265"
   operationButtonIconList:
   - {fileID: 600807287}
   - {fileID: 479988256}
   - {fileID: 1403931208}
   - {fileID: 215415083}
+  - {fileID: 371621771}
 --- !u!1 &1207052904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,6 +2461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 550181076}
   nm: {fileID: 1574589633}
+  obm: {fileID: 1168621016}
   equationOperators:
   - {fileID: 1560072956}
   - {fileID: 529626073}
@@ -3130,7 +3139,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 114000011550364668, guid: 5e51c16b37d706740af4098d334a1716, type: 2}
-  mText: x
+  mText: "\xD7"
   mFontSize: 20
   mFontStyle: 0
   mAlignment: 0
@@ -4557,7 +4566,7 @@ GameObject:
   - 4: {fileID: 2130487517}
   - 114: {fileID: 2130487518}
   m_Layer: 5
-  m_Name: Operator_Button_Equals
+  m_Name: Operator_Button_Relational
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

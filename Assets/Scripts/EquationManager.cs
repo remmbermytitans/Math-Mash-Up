@@ -6,6 +6,7 @@ public class EquationManager : MonoBehaviour
 {
 	public GameManager gm;
 	public NumberManager nm;
+	public OperationButtonManager obm;
 
 	public UILabel[] equationOperators;
 	public UILabel[] equationNumbers;
@@ -23,7 +24,6 @@ public class EquationManager : MonoBehaviour
 				break;
 			}
 		}
-
 	}
 
 	private void CheckEquation()
@@ -32,7 +32,7 @@ public class EquationManager : MonoBehaviour
 			CalculateEquation();
 		else 
 		{
-			ResetOperators();
+			ResetOperators();	
 			Debug.Log ("Equals sign needed!");
 		}
 
@@ -42,8 +42,12 @@ public class EquationManager : MonoBehaviour
 	{
 		foreach (UILabel uil in equationOperators)
 		{
-			if (uil.text == "=")
-				return true;
+			foreach (string str in obm.listOfPossibleRelationalOperators) 
+			{
+				Debug.Log (uil.text + ", " + str);
+				if (uil.text == str)
+					return true;
+			}
 		}
 		return false;
 	}
@@ -80,6 +84,10 @@ public class EquationManager : MonoBehaviour
 
 				case "÷":
 					equationValues [v] /= float.Parse (equationNumbers [n].text);
+					break;
+
+				case "yª":
+					equationValues [v] = Mathf.Pow(equationValues [v], float.Parse (equationNumbers [n].text));
 					break;
 				}
 				n++;
