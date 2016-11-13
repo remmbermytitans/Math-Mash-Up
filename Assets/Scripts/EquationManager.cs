@@ -28,7 +28,7 @@ public class EquationManager : MonoBehaviour
 
 	private void CheckEquation()
 	{
-		if (FindEquals ())
+		if (FindRelationalOperator ())
 			CalculateEquation();
 		else 
 		{
@@ -38,20 +38,19 @@ public class EquationManager : MonoBehaviour
 
 	}
 
-	private bool FindEquals()
+	private bool FindRelationalOperator()
 	{
 		foreach (UILabel uil in equationOperators)
 		{
 			foreach (string str in obm.listOfPossibleRelationalOperators) 
 			{
-				Debug.Log (uil.text + ", " + str);
 				if (uil.text == str)
 					return true;
 			}
 		}
 		return false;
 	}
-
+		
 	private void CalculateEquation()
 	{
 		//equationNumber counter
@@ -66,7 +65,7 @@ public class EquationManager : MonoBehaviour
 		//go through remaining equation, if equals are found, break off the equation and start a new one (in case there are two =s or more!)
 		for (int i = 0; i < equationOperators.Length; i++) 
 		{
-			if (equationOperators [i].text != "=") 
+			if (CalculateRelationalOperator(i)) 
 			{						
 				switch (equationOperators [i].text) 
 				{
@@ -105,8 +104,19 @@ public class EquationManager : MonoBehaviour
 		ComputeAnswers ();
 	}
 
+	private bool CalculateRelationalOperator(int i)
+	{
+		foreach (string str in obm.listOfPossibleRelationalOperators) 
+		{
+			if (equationOperators [i].text == str)
+				return false;
+		}
+		return true;
+	}
+
 	private void ComputeAnswers()
 	{
+		
 		bool allEquationsEqual = true;
 		float target = 0;
 
