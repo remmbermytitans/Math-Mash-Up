@@ -4,6 +4,7 @@ using System.Collections;
 public class OperationButtonEquals : MonoBehaviour 
 {
 	public OperationButtonManager obm;
+	public UILabel otl;
 	private bool press = false, clearSent = false;
 	private float timePressed = 0;
 
@@ -13,7 +14,7 @@ public class OperationButtonEquals : MonoBehaviour
 		if (!p) 
 		{
 			if (timePressed < .5)
-				obm.OperatorPressed (GetComponentInChildren<UILabel> ().text);
+				obm.OperatorPressed (otl.GetComponentInChildren<UILabel> ().text);
 			else
 				clearSent = false;
 			timePressed = 0;
