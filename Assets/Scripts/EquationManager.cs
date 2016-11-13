@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class EquationManager : MonoBehaviour 
 {
 	public GameManager gm;
+	public NumberManager nm;
 
 	public UILabel[] equationOperators;
 	public UILabel[] equationNumbers;
@@ -73,13 +74,29 @@ public class EquationManager : MonoBehaviour
 		}
 
 		if (allEquationsEqual) 
+		{
 			gm.UpdateStreak (true);
+			PrepareNewEquation ();
+		}
 		else
 			gm.UpdateStreak (false);
+		
 		ResetOperators ();
 	}
 
-	private void PrepareEquation()
+	private void PrepareNewEquation()
+	{
+		//need to calculate possible numbers that go here, then pass them down
+		int numberToChange = Random.Range(1, 4);
+
+		while (numberToChange > 0) 
+		{
+			nm.AddNewNumber (Random.Range (0, 4), Random.Range (1, 10));
+			numberToChange--;
+		}
+	}
+
+	private void CheckEquation()
 	{
 		if (FindEquals ())
 			CalculateEquation();
@@ -116,7 +133,7 @@ public class EquationManager : MonoBehaviour
 			{
 				uil.text = str;	
 				if (uil.gameObject == equationOperators [equationOperators.Length - 1].gameObject)
-					PrepareEquation();
+					CheckEquation();
 				break;
 			}
 		}
