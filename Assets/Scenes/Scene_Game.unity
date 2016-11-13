@@ -309,7 +309,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 91835267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.5, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 91835267}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d805c79a1ab11643bfd9d91e10c195a, type: 3}
+  m_Script: {fileID: 11500000, guid: 75e7459110b9666449485c40f25362a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   method: 0
@@ -333,28 +333,28 @@ MonoBehaviour:
     m_Curve:
     - time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 1
       tangentMode: 0
     - time: 1
       value: 1
-      inSlope: 0
+      inSlope: 1
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 0
-  delay: 0.5
-  duration: 2
+  delay: 0.2
+  duration: 1
   steeperCurves: 0
   tweenGroup: 1
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {fileID: 732256440}
-  to: {fileID: 594200897}
-  parentWhenFinished: 0
+  from: {x: 1, y: 1, z: 1}
+  to: {x: 2, y: 2, z: 1}
+  updateTable: 0
 --- !u!114 &91835270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,15 +383,15 @@ MonoBehaviour:
     relative: 1
     absolute: -16
   updateAnchors: 0
-  mColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+  mColor: {r: 1, g: 1, b: 1, a: 0.753}
   mPivot: 4
-  mWidth: 60
-  mHeight: 30
+  mWidth: 30
+  mHeight: 16
   mDepth: 2
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2
+  aspectRatio: 1.875
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 114000011550364668, guid: 5e51c16b37d706740af4098d334a1716, type: 2}
@@ -453,14 +453,14 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   ignoreTimeScale: 0
-  delay: 0.5
-  duration: 2
+  delay: 0.2
+  duration: 1
   steeperCurves: 0
   tweenGroup: 1
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 0.5
+  from: 0.75
   to: 0
 --- !u!114 &91835273
 MonoBehaviour:
@@ -600,7 +600,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0.1
-  duration: 1
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 2
   onFinished: []
@@ -702,7 +702,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0.1
-  duration: 1
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 1
   onFinished: []
@@ -773,6 +773,10 @@ MonoBehaviour:
   onFinished:
   - mTarget: {fileID: 141981810}
     mMethodName: NumberSwap
+    mParameters: []
+    oneShot: 0
+  - mTarget: {fileID: 1308765194}
+    mMethodName: ResetOperators
     mParameters: []
     oneShot: 0
   eventReceiver: {fileID: 0}
@@ -1117,7 +1121,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0.1
-  duration: 1
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 2
   onFinished: []
@@ -1219,7 +1223,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0.1
-  duration: 1
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 1
   onFinished: []
@@ -1290,6 +1294,10 @@ MonoBehaviour:
   onFinished:
   - mTarget: {fileID: 286048150}
     mMethodName: NumberSwap
+    mParameters: []
+    oneShot: 0
+  - mTarget: {fileID: 1308765194}
+    mMethodName: ResetOperators
     mParameters: []
     oneShot: 0
   eventReceiver: {fileID: 0}
@@ -2138,34 +2146,6 @@ Transform:
   - {fileID: 420472259}
   m_Father: {fileID: 550181073}
   m_RootOrder: 3
---- !u!1 &732256439
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 732256440}
-  m_Layer: 5
-  m_Name: Notification_Streak_Text_Start
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &732256440
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 732256439}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1710339787}
-  m_RootOrder: 1
 --- !u!1 &751911458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,7 +2689,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0.1
-  duration: 1
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 2
   onFinished: []
@@ -2811,7 +2791,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0.1
-  duration: 1
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 1
   onFinished: []
@@ -2882,6 +2862,10 @@ MonoBehaviour:
   onFinished:
   - mTarget: {fileID: 1350509763}
     mMethodName: NumberSwap
+    mParameters: []
+    oneShot: 0
+  - mTarget: {fileID: 1308765194}
+    mMethodName: ResetOperators
     mParameters: []
     oneShot: 0
   eventReceiver: {fileID: 0}
@@ -3552,12 +3536,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1710339786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 56, z: 0}
+  m_LocalPosition: {x: 0, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 91835268}
-  - {fileID: 732256440}
   m_Father: {fileID: 1967187343}
   m_RootOrder: 1
 --- !u!114 &1710339788
@@ -3586,9 +3569,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
   container: {fileID: 0}
-  side: 3
+  side: 8
   runOnlyOnce: 1
-  relativeOffset: {x: 0, y: -0.15}
+  relativeOffset: {x: 0, y: -0.05}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &1769620273
@@ -3823,7 +3806,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0.1
-  duration: 1
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 1
   onFinished: []
@@ -3902,7 +3885,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0.1
-  duration: 1
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 2
   onFinished: []
@@ -3996,6 +3979,10 @@ MonoBehaviour:
   onFinished:
   - mTarget: {fileID: 1798378818}
     mMethodName: NumberSwap
+    mParameters: []
+    oneShot: 0
+  - mTarget: {fileID: 1308765194}
+    mMethodName: ResetOperators
     mParameters: []
     oneShot: 0
   eventReceiver: {fileID: 0}

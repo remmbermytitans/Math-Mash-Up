@@ -74,26 +74,20 @@ public class EquationManager : MonoBehaviour
 		}
 
 		if (allEquationsEqual) 
-		{
 			gm.UpdateStreak (true);
-			PrepareNewEquation ();
-		}
 		else
 			gm.UpdateStreak (false);
 		
-		ResetOperators ();
+		PrepareNewEquation ();
 	}
 
-	private void PrepareNewEquation()
+	public void PrepareNewEquation()
 	{
 		//need to calculate possible numbers that go here, then pass them down
-		int numberToChange = Random.Range(1, 4);
 
-		while (numberToChange > 0) 
-		{
-			nm.AddNewNumber (Random.Range (0, 4), Random.Range (1, 10));
-			numberToChange--;
-		}
+		int[] possibleNumbers = { 2, 4, 8 };
+
+		nm.AddNewNumber (Random.Range (0, 4), possibleNumbers[Random.Range (0, 3)]);
 	}
 
 	private void CheckEquation()
