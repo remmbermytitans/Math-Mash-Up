@@ -25,7 +25,7 @@ public class OperationButtonManager : MonoBehaviour
 
 	string PickOperatorAtRandom()
 	{
-		int randNum = Random.Range(0, listOfPossibleOperators.Count);
+		int randNum = Random.Range(0, listOfPossibleOperators.Count); //CHANGE THIS FOR GODS SAKE
 		string randStr = listOfPossibleOperators [randNum];
 		listOfPossibleOperators.RemoveAt (randNum);
 		return randStr;

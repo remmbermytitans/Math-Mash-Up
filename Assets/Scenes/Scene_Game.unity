@@ -2472,6 +2472,7 @@ MonoBehaviour:
   - {fileID: 1350509762}
   - {fileID: 141981809}
   equationValues: []
+  relationalOperators: []
 --- !u!1 &1314648094
 GameObject:
   m_ObjectHideFlags: 0

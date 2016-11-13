@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class EquationManager : MonoBehaviour 
+public class EquationManager : MonoBehaviour
 {
 	public GameManager gm;
 	public NumberManager nm;
@@ -11,14 +11,15 @@ public class EquationManager : MonoBehaviour
 	public UILabel[] equationOperators;
 	public UILabel[] equationNumbers;
 	public List<float> equationValues = new List<float>();
+	public List <string> relationalOperators = new List<string>();
 
 	public void UpdateOperator(string str)
 	{
-		foreach (UILabel uil in equationOperators) 
+		foreach (UILabel uil in equationOperators)
 		{
 			if (uil.text == "?")
 			{
-				uil.text = str;	
+				uil.text = str;
 				if (uil.gameObject == equationOperators [equationOperators.Length - 1].gameObject)
 					CheckEquation();
 				break;
@@ -30,9 +31,9 @@ public class EquationManager : MonoBehaviour
 	{
 		if (FindRelationalOperator ())
 			CalculateEquation();
-		else 
+		else
 		{
-			ResetOperators();	
+			ResetOperators();
 			Debug.Log ("Equals sign needed!");
 		}
 
@@ -42,7 +43,7 @@ public class EquationManager : MonoBehaviour
 	{
 		foreach (UILabel uil in equationOperators)
 		{
-			foreach (string str in obm.listOfPossibleRelationalOperators) 
+			foreach (string str in obm.listOfPossibleRelationalOperators)
 			{
 				if (uil.text == str)
 					return true;
@@ -50,12 +51,12 @@ public class EquationManager : MonoBehaviour
 		}
 		return false;
 	}
-		
+
 	private void CalculateEquation()
 	{
-		//equationNumber counter
-		int n = 0; 														
-		int v = 0;														
+
+		int n = 0;	//equationNumber counter
+		int v = 0;  //equationValues counter
 
 		//set the first equation to the first number
 		equationValues.Add (0);
@@ -63,11 +64,11 @@ public class EquationManager : MonoBehaviour
 		n++;
 
 		//go through remaining equation, if equals are found, break off the equation and start a new one (in case there are two =s or more!)
-		for (int i = 0; i < equationOperators.Length; i++) 
+		for (int i = 0; i < equationOperators.Length; i++)
 		{
-			if (CalculateRelationalOperator(i)) 
-			{						
-				switch (equationOperators [i].text) 
+			if (FindRelationalOperator(i))
+			{
+				switch (equationOperators [i].text)
 				{
 				case "+":
 					equationValues [v] += float.Parse (equationNumbers [n].text);
@@ -77,7 +78,7 @@ public class EquationManager : MonoBehaviour
 					equationValues [v] -= float.Parse (equationNumbers [n].text);
 					break;
 
-				case "x":
+				case "×":
 					equationValues [v] *= float.Parse (equationNumbers [n].text);
 					break;
 
@@ -91,22 +92,23 @@ public class EquationManager : MonoBehaviour
 				}
 				n++;
 			}
-			else 
+			else
 			{
+				relationalOperators.Add (equationOperators [i].text);
 				equationValues.Add (0);
 				v++;
 
 				equationValues [v] += float.Parse (equationNumbers [n].text);
-				n++; 
+				n++;
 			}
 
 		}
 		ComputeAnswers ();
 	}
 
-	private bool CalculateRelationalOperator(int i)
+	private bool FindRelationalOperator(int i )
 	{
-		foreach (string str in obm.listOfPossibleRelationalOperators) 
+		foreach (string str in obm.listOfPossibleRelationalOperators)
 		{
 			if (equationOperators [i].text == str)
 				return false;
@@ -116,18 +118,47 @@ public class EquationManager : MonoBehaviour
 
 	private void ComputeAnswers()
 	{
-		
-		bool allEquationsEqual = true;
+		bool allEquationsTrue = true;
 		float target = 0;
 
 		target = equationValues [0];
-		foreach (float f in equationValues) 
+		for (int i = 0; i < relationalOperators.Count; i++)
 		{
-			if (f != target)
-				allEquationsEqual = false;
+			switch (relationalOperators[i])
+			{
+			case "=":
+				Debug.Log ("= operator");
+				if (!(target == equationValues [i + 1]))
+					allEquationsTrue = false;
+				break;
+
+			case "<":
+				Debug.Log ("< operator");
+				if (!(target < equationValues [i + 1]))
+					allEquationsTrue = false;
+				break;
+
+			case ">":
+				Debug.Log ("> operator");
+				if (!(target > equationValues [i + 1]))
+					allEquationsTrue = false;
+				break;
+
+			case "≤":
+				Debug.Log ("≤ operator");
+				if (!(target <= equationValues [i + 1]))
+					allEquationsTrue = false;
+				break;
+
+			case "≥":
+				Debug.Log ("≥ operator");
+				if (!(target >= equationValues [i + 1]))
+					allEquationsTrue = false;
+				break;
+			}
 		}
 
-		if (allEquationsEqual) 
+		if (allEquationsTrue)
 			gm.UpdateStreak (true);
 		else
 			gm.UpdateStreak (false);
@@ -139,15 +170,16 @@ public class EquationManager : MonoBehaviour
 	{
 		//need to calculate possible numbers that go here, then pass them down
 
-		int[] possibleNumbers = { 2, 4, 8 };
+		int[] possibleNumbers = {1, 2, 3, 4, 6, 8};
 
-		nm.AddNewNumber (Random.Range (0, 4), possibleNumbers[Random.Range (0, 3)]);
+		nm.AddNewNumber (Random.Range (0, 4), possibleNumbers[Random.Range (0, possibleNumbers.Length)]);
 	}
 
 	public void ResetOperators()
 	{
 		foreach (UILabel uil in equationOperators)
-			uil.text = "?";	
+			uil.text = "?";
 		equationValues.Clear ();
+		relationalOperators.Clear ();
 	}
 }
