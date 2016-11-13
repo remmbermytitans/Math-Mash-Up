@@ -353,7 +353,7 @@ MonoBehaviour:
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {fileID: 732256440}
-  to: {fileID: 0}
+  to: {fileID: 594200897}
   parentWhenFinished: 0
 --- !u!114 &91835270
 MonoBehaviour:
@@ -720,10 +720,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 0}
+  container: {fileID: 1861484308}
   side: 8
-  runOnlyOnce: 1
-  relativeOffset: {x: -0.2, y: 0.125}
+  runOnlyOnce: 0
+  relativeOffset: {x: -0.2, y: -3.5}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &371621769
@@ -1762,6 +1762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obm: {fileID: 1168621016}
+  otl: {fileID: 371621771}
 --- !u!61 &1207052907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2021,10 +2022,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 0}
+  container: {fileID: 1861484308}
   side: 8
-  runOnlyOnce: 1
-  relativeOffset: {x: 0, y: 0.125}
+  runOnlyOnce: 0
+  relativeOffset: {x: 0, y: -3.5}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &1339079319
@@ -2070,6 +2071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obm: {fileID: 1168621016}
+  otl: {fileID: 215415083}
 --- !u!61 &1339079322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2228,6 +2230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obm: {fileID: 1168621016}
+  otl: {fileID: 479988256}
 --- !u!61 &1399649892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2576,6 +2579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obm: {fileID: 1168621016}
+  otl: {fileID: 600807287}
 --- !u!61 &1610593771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3039,10 +3043,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 0}
+  container: {fileID: 1861484308}
   side: 8
-  runOnlyOnce: 1
-  relativeOffset: {x: 0.2, y: 0.125}
+  runOnlyOnce: 0
+  relativeOffset: {x: 0.2, y: -3.5}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &1861484308
@@ -3476,6 +3480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obm: {fileID: 1168621016}
+  otl: {fileID: 1403931208}
 --- !u!61 &2073024210
 BoxCollider2D:
   m_ObjectHideFlags: 0
