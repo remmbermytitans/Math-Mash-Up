@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour 
+{
+	public EquationManager em;
+	public NotificationManager nm;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	//probably not needed!
+	public void UpdateStreak(bool onFire)
+	{
+		nm.UpdateStreak (onFire);
 	}
 }
