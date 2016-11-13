@@ -73,12 +73,10 @@ public class EquationManager : MonoBehaviour
 		}
 
 		if (allEquationsEqual) 
-		{
 			gm.UpdateStreak (true);
-			ResetOperators ();
-		}
 		else
 			gm.UpdateStreak (false);
+		ResetOperators ();
 	}
 
 	private void PrepareEquation()

@@ -3,18 +3,21 @@ using System.Collections;
 
 public class NotificationManager : MonoBehaviour 
 {
-	public GameObject notificationStreakText;
-	private int score, streak = 0;
+	public UILabel notificationStreakText, statusPointText;
+	private int score, streak = 0, fontSize;
 
 	public void UpdateStreak(bool onFire)
 	{
 		Streak (onFire);
 		score += streak;
-		if (onFire)
-			notificationStreakText.GetComponent<UILabel> ().text = "+" + streak.ToString ();
-		else
-			notificationStreakText.GetComponent<UILabel> ().text = streak.ToString ();
+		statusPointText.text = score.ToString () + " pts";
 
+		if (onFire)
+			notificationStreakText.text = "+" + streak.ToString ();
+		else
+			notificationStreakText.text = streak.ToString ();
+
+		notificationStreakText.fontSize = fontSize;
 		notificationStreakText.GetComponent<UIPlayTween> ().Play (true);
 	}
 
@@ -26,6 +29,7 @@ public class NotificationManager : MonoBehaviour
 				streak += 1;
 			else
 				streak = 1;
+			fontSize = Mathf.Clamp (streak + 5, 8, 30);  
 		}
 		else 
 		{
@@ -33,6 +37,7 @@ public class NotificationManager : MonoBehaviour
 				streak -= 1;
 			else
 				streak = -1;
+			fontSize = Mathf.Clamp ((streak - 5) * -1, 8, 30);  
 		}
 	}
 }
