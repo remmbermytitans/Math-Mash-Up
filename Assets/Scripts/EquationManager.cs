@@ -11,6 +11,42 @@ public class EquationManager : MonoBehaviour
 	public UILabel[] equationNumbers;
 	public List<float> equationValues = new List<float>();
 
+	public void UpdateOperator(string str)
+	{
+		foreach (UILabel uil in equationOperators) 
+		{
+			if (uil.text == "?")
+			{
+				uil.text = str;	
+				if (uil.gameObject == equationOperators [equationOperators.Length - 1].gameObject)
+					CheckEquation();
+				break;
+			}
+		}
+
+	}
+
+	private void CheckEquation()
+	{
+		if (FindEquals ())
+			CalculateEquation();
+		else 
+		{
+			ResetOperators();
+			Debug.Log ("Equals sign needed!");
+		}
+
+	}
+
+	private bool FindEquals()
+	{
+		foreach (UILabel uil in equationOperators)
+		{
+			if (uil.text == "=")
+				return true;
+		}
+		return false;
+	}
 
 	private void CalculateEquation()
 	{
@@ -30,19 +66,19 @@ public class EquationManager : MonoBehaviour
 			{						
 				switch (equationOperators [i].text) 
 				{
-					case "+":
+				case "+":
 					equationValues [v] += float.Parse (equationNumbers [n].text);
 					break;
 
-					case "-":
+				case "-":
 					equationValues [v] -= float.Parse (equationNumbers [n].text);
 					break;
 
-					case "x":
+				case "x":
 					equationValues [v] *= float.Parse (equationNumbers [n].text);
 					break;
 
-					case "÷":
+				case "÷":
 					equationValues [v] /= float.Parse (equationNumbers [n].text);
 					break;
 				}
@@ -77,7 +113,7 @@ public class EquationManager : MonoBehaviour
 			gm.UpdateStreak (true);
 		else
 			gm.UpdateStreak (false);
-		
+
 		PrepareNewEquation ();
 	}
 
@@ -90,47 +126,10 @@ public class EquationManager : MonoBehaviour
 		nm.AddNewNumber (Random.Range (0, 4), possibleNumbers[Random.Range (0, 3)]);
 	}
 
-	private void CheckEquation()
-	{
-		if (FindEquals ())
-			CalculateEquation();
-		else 
-		{
-			ResetOperators();
-			Debug.Log ("Equals sign needed!");
-		}
-
-	}
-
-	private bool FindEquals()
-	{
-		foreach (UILabel uil in equationOperators)
-		{
-			if (uil.text == "=")
-				return true;
-		}
-		return false;
-	}
-
 	public void ResetOperators()
 	{
 		foreach (UILabel uil in equationOperators)
 			uil.text = "?";	
 		equationValues.Clear ();
-	}
-
-	public void UpdateOperator(string str)
-	{
-		foreach (UILabel uil in equationOperators) 
-		{
-			if (uil.text == "?")
-			{
-				uil.text = str;	
-				if (uil.gameObject == equationOperators [equationOperators.Length - 1].gameObject)
-					CheckEquation();
-				break;
-			}
-		}
-
 	}
 }
