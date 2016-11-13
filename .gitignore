@@ -83,3 +83,6 @@ Temporary Items
 .apdisk
 *.apk
 *.apk
+*.apk
+APKs/Test.apk
+*.apk

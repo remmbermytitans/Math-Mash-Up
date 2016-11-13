@@ -113,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 14988451}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.000002, y: -56, z: 0}
+  m_LocalPosition: {x: -25, y: -50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -246,7 +246,7 @@ Transform:
   m_GameObject: {fileID: 42600811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0116959065, y: 0.0116959065, z: 0.0116959065}
+  m_LocalScale: {x: 0.0125, y: 0.0125, z: 0.0125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 550181073}
@@ -508,7 +508,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 92869291}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30, y: 26, z: 0}
+  m_LocalPosition: {x: -30, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -527,10 +527,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 1861484308}
+  container: {fileID: 0}
   side: 8
   runOnlyOnce: 0
-  relativeOffset: {x: -0.3, y: -3.5}
+  relativeOffset: {x: -0.3, y: 0.125}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &184080871
@@ -556,7 +556,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 184080871}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 26, z: 0}
+  m_LocalPosition: {x: 10, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -575,10 +575,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 1861484308}
+  container: {fileID: 0}
   side: 8
   runOnlyOnce: 0
-  relativeOffset: {x: 0.1, y: -3.5}
+  relativeOffset: {x: 0.1, y: 0.125}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &215415081
@@ -701,7 +701,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 228113199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 26, z: 0}
+  m_LocalPosition: {x: -20, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -720,10 +720,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 1861484308}
+  container: {fileID: 0}
   side: 8
   runOnlyOnce: 0
-  relativeOffset: {x: -0.2, y: -3.5}
+  relativeOffset: {x: -0.2, y: 0.125}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &371621769
@@ -783,7 +783,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 0.9568628, g: 0.23137257, b: 0.23137257, a: 1}
   mPivot: 7
   mWidth: 20
   mHeight: 20
@@ -1277,7 +1277,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BackGroundColor: {r: 0.7058824, g: 0.24705884, b: 0.18823531, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1637,7 +1637,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 961344260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.000002, y: -36, z: 0}
+  m_LocalPosition: {x: 25, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1805,7 +1805,7 @@ MonoBehaviour:
     relative: 1
     absolute: 20
   updateAnchors: 2
-  mColor: {r: 1, g: 0.24264705, b: 0.24264705, a: 1}
+  mColor: {r: 0.9960785, g: 0.9725491, b: 0.9725491, a: 1}
   mPivot: 7
   mWidth: 100
   mHeight: 20
@@ -2003,7 +2003,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1314648094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 26, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2022,10 +2022,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 1861484308}
+  container: {fileID: 0}
   side: 8
   runOnlyOnce: 0
-  relativeOffset: {x: 0, y: -3.5}
+  relativeOffset: {x: 0, y: 0.125}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &1339079319
@@ -2114,7 +2114,7 @@ MonoBehaviour:
     relative: 1
     absolute: 20
   updateAnchors: 2
-  mColor: {r: 1, g: 0.24264705, b: 0.24264705, a: 1}
+  mColor: {r: 1, g: 0.3647059, b: 0.28235295, a: 1}
   mPivot: 4
   mWidth: 50
   mHeight: 20
@@ -2162,7 +2162,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1349505454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 26, z: 0}
+  m_LocalPosition: {x: -10, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2181,10 +2181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 1861484308}
+  container: {fileID: 0}
   side: 8
   runOnlyOnce: 0
-  relativeOffset: {x: -0.1, y: -3.5}
+  relativeOffset: {x: -0.1, y: 0.125}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &1399649889
@@ -2273,7 +2273,7 @@ MonoBehaviour:
     relative: 1
     absolute: 20
   updateAnchors: 2
-  mColor: {r: 1, g: 0.24264705, b: 0.24264705, a: 1}
+  mColor: {r: 1, g: 0.3647059, b: 0.28235295, a: 1}
   mPivot: 4
   mWidth: 50
   mHeight: 20
@@ -2622,7 +2622,7 @@ MonoBehaviour:
     relative: 1
     absolute: 20
   updateAnchors: 2
-  mColor: {r: 1, g: 0.24264705, b: 0.24264705, a: 1}
+  mColor: {r: 1, g: 0.3647059, b: 0.28235295, a: 1}
   mPivot: 4
   mWidth: 50
   mHeight: 20
@@ -2704,7 +2704,7 @@ MonoBehaviour:
     relative: 1
     absolute: 5
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 0.9686275, g: 0.23529413, b: 0.23529413, a: 1}
   mPivot: 8
   mWidth: 14
   mHeight: 4
@@ -2768,7 +2768,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1710339786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 60, z: 0}
+  m_LocalPosition: {x: 0, y: 56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2830,7 +2830,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1769620273}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.000002, y: -56, z: 0}
+  m_LocalPosition: {x: 25, y: -50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2976,7 +2976,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1804902280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.000002, y: -36, z: 0}
+  m_LocalPosition: {x: -25, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -3025,7 +3025,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1824907168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 26, z: 0}
+  m_LocalPosition: {x: 20, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -3044,10 +3044,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 1861484308}
+  container: {fileID: 0}
   side: 8
   runOnlyOnce: 0
-  relativeOffset: {x: 0.2, y: -3.5}
+  relativeOffset: {x: 0.2, y: 0.125}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &1861484308
@@ -3073,7 +3073,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1861484308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 86, z: 0}
+  m_LocalPosition: {x: 0, y: 80, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -3219,7 +3219,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1915980984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: 26, z: 0}
+  m_LocalPosition: {x: 30, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -3238,10 +3238,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 550181075}
-  container: {fileID: 1861484308}
+  container: {fileID: 0}
   side: 8
   runOnlyOnce: 0
-  relativeOffset: {x: 0.3, y: -3.5}
+  relativeOffset: {x: 0.3, y: 0.125}
   pixelOffset: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &1927054960
@@ -3413,7 +3413,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 2
-  mColor: {r: 1, g: 0.24264705, b: 0.24264705, a: 1}
+  mColor: {r: 1, g: 0.3647059, b: 0.28235295, a: 1}
   mPivot: 1
   mWidth: 100
   mHeight: 15
@@ -3524,7 +3524,7 @@ MonoBehaviour:
     relative: 1
     absolute: 20
   updateAnchors: 2
-  mColor: {r: 1, g: 0.24264705, b: 0.24264705, a: 1}
+  mColor: {r: 1, g: 0.3647059, b: 0.28235295, a: 1}
   mPivot: 4
   mWidth: 50
   mHeight: 20
@@ -3572,7 +3572,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2130487516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -86, z: 0}
+  m_LocalPosition: {x: 0, y: -80, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
